@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/coffebackground"
+    tools:context=".lattepage">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="104dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginBottom="96dp"
+        android:src="@drawable/coffeelogoapp"
+        app:layout_constraintBottom_toTopOf="@+id/coffeedisplay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/coffeedisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="31dp"
+        android:layout_marginBottom="27dp"
+        android:background="#ECE5DF"
+        android:padding="10dp"
+        android:text="You have opted for a premium coffee!"
+        android:textColor="#8B6239"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toTopOf="@+id/selectsize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <TextView
+        android:id="@+id/selectsize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:background="#8B6239"
+        android:padding="10dp"
+        android:text="Kindly Select The Size: "
+        android:textColor="#ECE5DF"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toTopOf="@+id/sizespinner"
+        app:layout_constraintStart_toStartOf="@+id/coffeedisplay"
+        app:layout_constraintTop_toBottomOf="@+id/coffeedisplay" />
+
+    <Spinner
+        android:id="@+id/sizespinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="34dp"
+        android:background="#ECE5DF"
+        android:hint="Select Size"
+        android:padding="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/sizeselected"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selectsize" />
+
+    <TextView
+        android:id="@+id/sizeselected"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="19dp"
+        android:background="#8B6239"
+        android:padding="10dp"
+        android:textColor="#ECE5DF"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/pricelist"
+        app:layout_constraintEnd_toEndOf="@+id/pricelist"
+        app:layout_constraintStart_toStartOf="@+id/pricelist"
+        app:layout_constraintTop_toBottomOf="@+id/sizespinner" />
+
+    <TextView
+        android:id="@+id/pricelist"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginBottom="29dp"
+        android:background="#ECE5DF"
+        android:padding="10dp"
+        android:textColor="#8B6239"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/checkout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sizeselected" />
+
+    <Button
+        android:id="@+id/checkout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="74dp"
+        android:background="#ECE5DF"
+        android:padding="5dp"
+        android:text="Proceed to Checkout"
+        android:onClick="checkoutPage"
+        android:textColor="#8B6239"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/addtcart"
+        app:layout_constraintTop_toBottomOf="@+id/pricelist" />
+
+    <Button
+        android:id="@+id/addtcart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="5dp"
+        android:background="#ECE5DF"
+        android:padding="5dp"
+        android:text="Add to Cart"
+        android:textColor="#8B6239"
+        app:layout_constraintEnd_toStartOf="@+id/checkout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pricelist" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
